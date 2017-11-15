@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title></title>  <!--Presentation title goes here-->
+
+		<!--Import CSS and CSS theme-->
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--Check out the file demo.html (came bundled) to see the Reveal.js framework in action-->
+		<!--For more information and instructions, visit https://github.com/hakimel/reveal.js-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<!--This is slide 1-->
+				</section>
+				<!--
+					To add more slides, make a new <section>
+				-->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },  // Markdown stuffs
+					{ src: 'plugin/zoom-js/zoom.js', async: true },  // Import zoom.js
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },  // Import code highlighting engine
+					{ src: 'plugin/math/math.js', async: true },  // Import math.js, an alternative plugin of MathJax
+					{ src: 'plugin/notes/notes.js', async: true },  // Import Speaker Notes plugin
+				]
+			});
+		</script>
+	</body>
+</html>
