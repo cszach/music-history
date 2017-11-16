@@ -10,7 +10,7 @@ function main() {
         );
     }
     else if (!is.safari() || !is.ipad()) {
-        alert("Browser or device not supported, continue?");
+        alert("Browser or device not supported.");
     }
 }
 
