@@ -1,3 +1,11 @@
 #headline {
     font-size: 3em;
 }
+
+.slides > #_02 {
+    text-align: right;
+}
+
+.slides #_02 h2 {
+    transition: 1s;
+}
