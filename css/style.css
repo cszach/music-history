@@ -4,6 +4,7 @@
 
 .slides > #_02 {
     text-align: right;
+    text-align: -webkit-right;
 }
 
 .slides #_02 h2 {
