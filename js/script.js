@@ -9,6 +9,9 @@ function main() {
             }
         );
     }
+    else if (!is.safari() || !is.ipad()) {
+        alert("Browser or device not supported, continue?");
+    }
 }
 
 $(document).ready(main);
