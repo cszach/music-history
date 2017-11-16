@@ -1,3 +1,7 @@
+html {
+    font-size: 16px;
+}
+
 #headline {
     font-size: 3em;
 }
@@ -9,4 +13,5 @@
 
 .slides #_02 h2 {
     transition: 1s;
+    -webkit-transition: 1s;
 }
