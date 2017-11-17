@@ -26,14 +26,6 @@ function validSystem() {
 function main() {
     switch (validSystem()) {
         case 0:
-            $("#_02").children("h2").hover(
-                function() { 
-                    $(this).css("padding-right", "10rem");
-                },
-                function() {
-                    $(this).css("padding-right", "initial");
-                }
-            );
             break;
         case 1:
             break;
@@ -48,7 +40,17 @@ function main() {
             location.reload();
     }
 
-    // Shared JavaScript actions
+    /*Shared JavaScript actions*/
+
+    Reveal.addEventListener("credit-rollback", function() {
+        $("#_02").children("h2").css("padding-right", "3.5em");
+    });
+
+    Reveal.addEventListener("slide-02-back", function() {
+        setTimeout(function() {
+            $("#_02").children("h2").css("padding-right", "initial");
+        }, 300);
+    });
 }
 
 $(document).ready(main);
