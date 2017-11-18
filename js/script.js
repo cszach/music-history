@@ -36,6 +36,9 @@ function main() {
             );
             break;
         case 1:  // Safari on iPad
+            $("#_02").children("h2").on("click", function() {
+                $(this).css("visibility", "hidden");
+            });
             break;
         case -1:  // Unsupported browser/device
             alertMsg = "Your browser and/or device is not supported.\n"
