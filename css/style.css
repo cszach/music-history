@@ -16,7 +16,3 @@ html {
     transition: 1s;
     -webkit-transition: 1s;
 }
-
-.slides #_02 h2:hover {
-    color: #15DDD8;
-}

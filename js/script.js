@@ -25,11 +25,11 @@ function validSystem() {
  */
 function main() {
     switch (validSystem()) {
-        case 0:
+        case 0:  // Chrome on PC
             break;
-        case 1:
+        case 1:  // Safari on iPad
             break;
-        case -1:
+        case -1:  // Unsupported browser/device
             alertMsg = "Your browser and/or device is not supported.\n"
                 + "If you are on a desktop device, view the presentation in Google Chrome or a Chrome-based web browser like Chromiun.\n"
                 + "If you are on an iPad, view this in Safari.\nYou can proceed, however, you might see unexpected things";
@@ -51,6 +51,15 @@ function main() {
             $("#_02").children("h2").css("padding-right", "initial");
         }, 300);
     });
+
+    $("#_02").children("h2").hover(
+        function() {
+            $(this).siblings().css("color", "rgba(255, 255, 255, 0.3)");
+        },
+        function() {
+            $(this).siblings().css("color", "#fff");
+        }
+    );
 }
 
 $(document).ready(main);
