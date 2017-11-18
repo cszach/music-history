@@ -26,6 +26,14 @@ function validSystem() {
 function main() {
     switch (validSystem()) {
         case 0:  // Chrome on PC
+            $("#_02").children("h2").hover(
+                function() {
+                    $(this).siblings().css("color", "rgba(255, 255, 255, 0.3)");
+                },
+                function() {
+                    $(this).siblings().css("color", "#fff");
+                }
+            );
             break;
         case 1:  // Safari on iPad
             break;
@@ -40,8 +48,10 @@ function main() {
             location.reload();
     }
 
+
     /*Shared JavaScript actions*/
 
+    // Just an animation for slide #2
     Reveal.addEventListener("credit-rollback", function() {
         $("#_02").children("h2").css("padding-right", "3.5em");
     });
@@ -51,15 +61,6 @@ function main() {
             $("#_02").children("h2").css("padding-right", "initial");
         }, 300);
     });
-
-    $("#_02").children("h2").hover(
-        function() {
-            $(this).siblings().css("color", "rgba(255, 255, 255, 0.3)");
-        },
-        function() {
-            $(this).siblings().css("color", "#fff");
-        }
-    );
 }
 
 $(document).ready(main);
