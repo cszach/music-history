@@ -37,7 +37,7 @@ function main() {
             break;
         case 1:  // Safari on iPad
             $("#_02").children("h2").on("click", function() {
-                $(this).css("opacity", "0");
+                $(this).hide("fade", 1000);
             });
             break;
         case -1:  // Unsupported browser/device
