@@ -37,7 +37,7 @@ function main() {
             break;
         case 1:  // Safari on iPad
             $("#_02").children("h2").on("click", function() {
-                $(this).hide("fade", 1000);
+                $(this).fadeOut(1000);
             });
             break;
         case -1:  // Unsupported browser/device
