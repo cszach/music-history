@@ -89,7 +89,12 @@ function main() {
         piano.play(note[Math.floor(Math.random() * note.length)], Math.floor(Math.random() * 3 + 3), 2);
         delete note;
         delete piano;
-        $(this).css("visibility", "hidden");
+        if ($(this).css("opacity") != "0") {
+            $(this).css("opacity", "0");
+        }
+        else {
+            $("#piano-bubbles").children(".bubble").css("opacity", "0.5");
+        }
     });
 }
 
