@@ -62,6 +62,8 @@ function main() {
         $("#_03").children(".media").html("<iframe src=\"https://www.youtube.com/embed/A2WdjyKQ57A\" frameborder=\"0\" allowfullscreen></iframe>");
     }
     else {
+        // This is just for my own purpose.
+        // If you like, you can just as well download the youtube videos and link them.
         $("#_03").children(".media").html("<video controls>\n<source src=\"lib/video/Cristofori Piano.mp4\" type=\"video/mp4\">\n:(<br/>\nTrình duyệt web không hỗ trợ video.\n</video>");
     }
 
