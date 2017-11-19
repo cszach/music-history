@@ -30,17 +30,6 @@ p {
     font-size: 3em;
 }
 
-.slides > #_02 {
-    text-align: right;
-    text-align: -webkit-right;
-}
-
-.slides #_02 h2 {
-    padding-right: 3.5em;
-    transition: 1s;
-    -webkit-transition: 1s;
-}
-
 .year {
     text-align: left;
 }
@@ -66,11 +55,6 @@ p.description.serif {
     font-family: Roboto, Vogue, Arial;
 }
 
-#_03 section .description {
-    font-size: 1.05em;
-    text-align: left;
-}
-
 .media > iframe {
     width: 25em;
     height: 15em
@@ -78,4 +62,63 @@ p.description.serif {
 
 .media > video {
     width: 100%;
+}
+
+.slides > #_02 {
+    text-align: right;
+    text-align: -webkit-right;
+}
+
+.slides #_02 h2 {
+    padding-right: 3.5em;
+    transition: 1s;
+    -webkit-transition: 1s;
+}
+
+#_03 section .description {
+    font-size: 1.05em;
+    text-align: left;
+}
+
+#_03 #piano-bubbles .bubble {
+    margin: 5px 0px;
+    height: 2em;
+    width: 2em;
+    display: block;
+    border-radius: 100%;
+    opacity: 0.5;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+#_03 #piano-bubbles .bubble:hover {
+    opacity: 0.7;
+}
+
+#_03 #piano-bubbles .bubble:first-child {
+    background-color: orange;
+}
+
+#_03 #piano-bubbles .bubble:nth-child(2) {
+    background-color: blue;
+}
+
+#_03 #piano-bubbles .bubble:nth-child(3) {
+    background-color: yellowgreen;
+}
+
+#_03 #piano-bubbles .bubble:nth-child(4) {
+    background-color: red;
+}
+
+#_03 #piano-bubbles .bubble:nth-child(5) {
+    background-color: white;
+}
+
+#_03 #piano-bubbles .bubble:nth-child(6) {
+    background-color: yellow;
+}
+
+#_03 #piano-bubbles .bubble:nth-child(7) {
+    background-color: magenta;
 }

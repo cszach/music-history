@@ -53,17 +53,6 @@ function main() {
 
 
     /*Shared JavaScript actions*/
-
-    // Just an animation for slide #2
-    Reveal.addEventListener("credit-rollback", function() {
-        $("#_02").children("h2").css("padding-right", "6em");
-    });
-
-    Reveal.addEventListener("slide-02-back", function() {
-        setTimeout(function() {
-            $("#_02").children("h2").css("padding-right", "initial");
-        }, 300);
-    });
     
     // If the presentation is being viewed online, load embedded videos from YouTube.
     // If the presentation is being offline, load local videos.
@@ -75,6 +64,33 @@ function main() {
     else {
         $("#_03").children(".media").html("<video controls>\n<source src=\"lib/video/Cristofori Piano.mp4\" type=\"video/mp4\">\n:(<br/>\nTrình duyệt web không hỗ trợ video.\n</video>");
     }
+
+    // Just an animation for slide #2
+    Reveal.addEventListener("credit-rollback", function() {
+        $("#_02").children("h2").css("padding-right", "6em");
+    });
+
+    Reveal.addEventListener("slide-02-back", function() {
+        setTimeout(function() {
+            $("#_02").children("h2").css("padding-right", "initial");
+        }, 300);
+    });
+
+    // Random margin-left for each div in #piano-bubbles
+    $("#piano-bubbles").children(".bubble").each(function() {
+        $(this).css("margin-left", Math.floor(Math.random() * 16 + 5) + "em");
+    });
+
+    // Play sound on #piano-bubbles > .bubble click
+    var synth = null;
+    $("#piano-bubbles").children(".bubble").on("click", function() {
+        note = ["A", "B", "C", "D", "E", "F", "G"];
+        piano = Synth.createInstrument("piano");
+        piano.play(note[Math.floor(Math.random() * note.length)], Math.floor(Math.random() * 3 + 3), 2);
+        delete note;
+        delete piano;
+        $(this).css("visibility", "hidden");
+    });
 }
 
 $(document).ready(main);
