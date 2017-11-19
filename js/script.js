@@ -72,6 +72,9 @@ function main() {
     if (is.online()) {
         $("#_03").children(".media").html("<iframe src=\"https://www.youtube.com/embed/A2WdjyKQ57A\" frameborder=\"0\" allowfullscreen></iframe>");
     }
+    else if (is.offline() || location.hostname == "localhost" || location.hostname == "127.0.0.1") {
+        $("#_03").children(".media").html("<video controls><source src=\"lib/video/Cristofori Piano.mp4\" type=\"video/mp4\">:(<br/>Trình duyệt web không hỗ trợ video.</video>");
+    }
 }
 
 $(document).ready(main);
