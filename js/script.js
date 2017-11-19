@@ -56,7 +56,7 @@ function main() {
 
     // Just an animation for slide #2
     Reveal.addEventListener("credit-rollback", function() {
-        $("#_02").children("h2").css("padding-right", "3.5em");
+        $("#_02").children("h2").css("padding-right", "6em");
     });
 
     Reveal.addEventListener("slide-02-back", function() {
@@ -64,6 +64,14 @@ function main() {
             $("#_02").children("h2").css("padding-right", "initial");
         }, 300);
     });
+    
+    // If the presentation is being viewed online, load embedded videos from YouTube.
+    // If the presentation is being offline, load local videos.
+    // The online version of this presentation is created using GitHub Pages.
+    // GitHub does not allow big files (in this case, video files) so...
+    if (is.online()) {
+        $("#_03").children(".media").html("<iframe src=\"https://www.youtube.com/embed/A2WdjyKQ57A\" frameborder=\"0\" allowfullscreen></iframe>");
+    }
 }
 
 $(document).ready(main);

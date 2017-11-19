@@ -30,16 +30,34 @@
     <body>
         <div class="reveal">
             <div class="slides">
-                <section id="_01" data-state="credit-rollback">
+                <section class="center" id="_01" data-state="credit-rollback">
                     <h1 id="headline">Lịch Sử Âm Nhạc</h1>
                 </section>
-                <section id="_02" data-state="slide-02-back">
+                <section class="center" id="_02" data-state="slide-02-back more">
                     <h2>Trần Khánh Uyên</h2>
                     <h2>Vũ Mai Anh</h2>
                     <h2>Nguyễn Hoàng Dương</h2>
                 </section>
-                <section>
-                    
+                <section id="_03">
+                    <section data-background-image="lib/img/piano-dark.jpg">
+                        <h3 class="year">1700</h3>
+                        <h2 class="subject">Pi-a-nô</h2>
+                        <p class="description serif">
+                            Pi-a-nô (Dương Cầm) là nhạc cụ có phím rất phổ biến được phát minh bởi
+                            Bartolomeo Cristofori (1655 - 1731) xứ Pa-đua, I-ta-li-a.
+                            Cristofori là chuyên gia chế tạo nhạc cụ Cla-vi-co Cla-vê-sin (Claveco Clavecin / Harpsichord),
+                            và vào khoảng năm 1700, ông thử tạo một chiếc đàn Cla-vê-sin mà dùng búa gõ thay vì dùng
+                            ống lông. Đó chính là chiếc pi-a-nô đầu tiên. Có tài liệu ghi pi-a-nô được phát minh vào
+                            năm 1698. Pi-a-nô cổ điển hoạt động bằng cách gõ vào các dây thép.
+                        </p>
+                    </section>
+                    <section class="media" data-background-image="lib/img/orange-chair-furniture.jpg">
+                        <video controls>
+                            <source src="lib/video/Cristofori Piano.mp4" type="video/mp4">
+                            :(<br/>
+                            Trình duyệt web không hỗ trợ video.
+                        </video>
+                    </section>
                 </section>
             </div>
         </div>
@@ -53,7 +71,9 @@
 
         <script>
             Reveal.initialize({
+                width: '90%',
                 progress: false,
+                center: true,
                 dependencies: [
                     { src: 'plugin/markdown/marked.js' },
                     { src: 'plugin/markdown/markdown.js' },  // Markdown stuffs

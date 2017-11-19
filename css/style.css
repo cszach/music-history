@@ -1,5 +1,29 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../lib/font/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto-Condensed";
+    src: url("../lib/font/Roboto Condensed/RobotoCondensed-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("../lib/font/Oswald/Oswald-Medium.ttf");
+}
+
+@font-face {
+    font-family: "EB Garamond";
+    src: url("../lib/font/EB Garamond/EBGaramond-Medium.ttf") format("truetype");
+}
+
 html {
     font-size: 16px;
+}
+
+p {
+    margin: 0px !important;
 }
 
 #headline {
@@ -15,4 +39,43 @@ html {
     padding-right: 3.5em;
     transition: 1s;
     -webkit-transition: 1s;
+}
+
+.year {
+    text-align: left;
+}
+
+.subject {
+    text-align: left;
+}
+
+.year.modern, .subject.modern {
+    font-family: Oswald, Roboto Condensed, Helvetica, serif;
+}
+
+.contents > p.description, .contents > div.media {
+    width: 50%;
+    display: inline-block;
+}
+
+p.description.serif {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, EB Garamond, FreeSerif, serif;
+}
+
+.contenst > p.description.modern {
+    font-family: Roboto, Vogue, Arial;
+}
+
+#_03 section .description {
+    font-size: 1.05em;
+    text-align: left;
+}
+
+.media > iframe {
+    width: 25em;
+    height: 15em
+}
+
+.media > video {
+    width: 100%;
 }
