@@ -110,21 +110,6 @@ function main() {
     // Number of piano bubbles on the second verticle slide of slide 3
     var numberOfPianoBubbles = null;
 
-    Reveal.configure({
-        keyboard: {
-            82: function() {  // R key -> Reset things that were manually changed by the user
-                $("#piano-bubbles").children(".bubble").css("opacity", "0");
-                setTimeout(function() {
-                    placePianoBubbles();
-                    numberOfPianoBubbles = 7
-                    setTimeout(function() {
-                        $("#piano-bubbles").children(".bubble").css("opacity", "0.5");
-                    }, 100);
-                }, 900);
-            }
-        }
-    });
-
     // Just an animation for slide #2
     Reveal.addEventListener("credit-rollback", function() {
         $("#_02").children("h2").css("padding-right", "6em");
