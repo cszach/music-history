@@ -120,6 +120,24 @@ p.description.serif {
     background-color: magenta;
 }
 
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    #headline {
+        font-size: 2.5em;
+    }
+
+    #_02 h2 {
+        font-size: 1.2em;
+    }
+
+    h3.year {
+        font-size: 0.8em;
+    }
+
+    p.description {
+        font-size: 0.8em;
+    }
+}
+
 @media only screen and (min-width: 1800px) {
     #_02 h2 {
         font-size: 2em;
