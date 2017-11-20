@@ -21,6 +21,44 @@ function validSystem() {
 }
 
 /**
+ * Procedure to place piano bubbles at the second vertical slide of slide 3
+ */
+function placePianoBubbles() {
+    /* Put 'margin-left: auto' randomly */
+
+    // Set transition duration to 1.5s to for bubbles' appreance animation
+    $("#piano-bubbles").children(".bubble").css("transition", "1.5s");
+
+    // Place bubbles to the left at first
+    // Avoid having all the bubbles at the right side after some check-ins
+    $("#piano-bubbles").children(".bubble").css("margin-left", "initial");
+
+    // Set left margin to auto randomly
+    $("#piano-bubbles").children(".bubble").each(function() {
+        if (Math.floor(Math.random() * 2 + 1) == 1) {
+            $(this).css("margin-left", "auto");
+        }
+    });
+
+    changeFactor = null;  // The CSS rule to be changed (margin-left or margin-right), depended on the margin-left
+    $("#piano-bubbles").children(".bubble").each(function() {
+        changeFactor = ($(this).css("margin-left") == "auto") ? "margin-right" : "margin-left";
+        $(this).css(changeFactor, Math.floor(Math.random() * 16 + 5) + "em");
+    });
+
+    // Stuffs to do at the end
+    setTimeout(function() {
+        // Clear variable afterwards
+        delete changeFactor;
+        // Set bubbles' transition to 0.8s
+        $("#piano-bubbles").children(".bubble").css("transition", "0.8s");
+        // Reset cursor type
+        $("#piano-bubbles").children(".bubble").css("opacity", "0.5").css("cursor", "pointer");
+    }, 100);
+
+}
+
+/**
  * All main activities of the presentation
  */
 function main() {
@@ -78,24 +116,35 @@ function main() {
         }, 300);
     });
 
-    // Random margin-left for each div in #piano-bubbles
-    $("#piano-bubbles").children(".bubble").each(function() {
-        $(this).css("margin-left", Math.floor(Math.random() * 16 + 5) + "em");
+    var numberOfPianoBubbles = null;
+
+    Reveal.addEventListener("place-bubble", function() {
+        if (numberOfPianoBubbles == null || numberOfPianoBubbles == 7) {
+            placePianoBubbles();
+            numberOfPianoBubbles = 7;
+        }
     });
 
     // Play sound on #piano-bubbles > .bubble click
-    var synth = null;
     $("#piano-bubbles").children(".bubble").on("click", function() {
-        note = ["A", "B", "C", "D", "E", "F", "G"];
-        piano = Synth.createInstrument("piano");
-        piano.play(note[Math.floor(Math.random() * note.length)], Math.floor(Math.random() * 3 + 3), 2);
-        delete note;
-        delete piano;
-        if ($(this).css("opacity") != "0") {
+        if ($(this).css("cursor") == "pointer") {
+            // Create sound
+            note = ["A", "B", "C", "D", "E", "F", "G"];
+            piano = Synth.createInstrument("piano");
+            piano.play(note[Math.floor(Math.random() * note.length)], Math.floor(Math.random() * 3 + 3), 2);
+            delete note;
+            delete piano;
+            // Set opacity to 0 & Set cursor to initial
+            // -> Fake bubble dissapear
             $(this).css("opacity", "0");
-        }
-        else {
-            $("#piano-bubbles").children(".bubble").css("opacity", "0.5");
+            $(this).css("cursor", "initial");
+            numberOfPianoBubbles -= 1;
+            if (numberOfPianoBubbles == 0) {
+                setTimeout(function() {
+                    placePianoBubbles();
+                    numberOfPianoBubbles = 7;
+                }, 800);
+            }
         }
     });
 }

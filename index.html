@@ -53,15 +53,14 @@
                     </section>
                     <section class="media" data-background-image="lib/img/orange-chair-furniture.jpg">
                     </section>
-                    <section id="piano-bubbles" data-background-image="lib/img/piano-stage.jpg">
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
-                        <div class="bubble"></div>
+                    <section id="piano-bubbles" data-state="place-bubble" data-background-image="lib/img/piano-stage.jpg">
+                        <div class="bubble" align="right"></div>
+                        <div class="bubble" align="right"></div>
+                        <div class="bubble" align="right"></div>
+                        <div class="bubble" align="right"></div>
+                        <div class="bubble" align="right"></div>
+                        <div class="bubble" align="right"></div>
+                        <div class="bubble" align="right"></div>
                     </section>
                 </section>
             </div>
@@ -94,7 +93,14 @@
             Reveal.configure({
                 keyboard: {
                     82: function() {  // R key -> Reset things that were manually changed by the user
-                        $("#piano-bubbles").children(".bubble").css("opacity", "0.5");
+                        $("#piano-bubbles").children(".bubble").css("opacity", "0");
+                        setTimeout(function() {
+                            placePianoBubbles();
+                            numberOfPianoBubbles = 7;
+                            setTimeout(function() {
+                                $("#piano-bubbles").children(".bubble").css("opacity", "0.5");
+                            }, 100);
+                        }, 900);
                     }
                 }
             });
