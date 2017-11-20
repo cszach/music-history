@@ -68,7 +68,6 @@
 
         <script src="lib/js/jquery-3.2.1.min.js"></script>
         <script src="lib/js/jquery-ui.min.js"></script>
-        <script src="lib/js/Tone.min.js"></script>
         <script src="lib/js/audiosynth.js"></script>
         <script src="lib/js/is.min.js"></script>
         <script src="lib/js/head.min.js"></script>
@@ -88,21 +87,6 @@
                     { src: 'plugin/math/math.js', async: true },  // Import math.js, an alternative plugin of MathJax
                     { src: 'plugin/notes/notes.js', async: true },  // Import Speaker Notes plugin
                 ]
-            });
-
-            Reveal.configure({
-                keyboard: {
-                    82: function() {  // R key -> Reset things that were manually changed by the user
-                        $("#piano-bubbles").children(".bubble").css("opacity", "0");
-                        setTimeout(function() {
-                            placePianoBubbles();
-                            numberOfPianoBubbles = 7;
-                            setTimeout(function() {
-                                $("#piano-bubbles").children(".bubble").css("opacity", "0.5");
-                            }, 100);
-                        }, 900);
-                    }
-                }
             });
         </script>
     </body>

@@ -28,6 +28,7 @@ function placePianoBubbles() {
 
     // Set transition duration to 1.5s to for bubbles' appreance animation
     $("#piano-bubbles").children(".bubble").css("transition", "1.5s");
+    $("#piano-bubbles").children(".bubble").css("-webkit-transition", "1.5s");
 
     // Place bubbles to the left at first
     // Avoid having all the bubbles at the right side after some check-ins
@@ -52,6 +53,7 @@ function placePianoBubbles() {
         delete changeFactor;
         // Set bubbles' transition to 0.8s
         $("#piano-bubbles").children(".bubble").css("transition", "0.8s");
+        $("#piano-bubbles").children(".bubble").css("-webkit-transition", "0.8s");
         // Reset cursor type
         $("#piano-bubbles").children(".bubble").css("opacity", "0.5").css("cursor", "pointer");
     }, 100);
@@ -75,7 +77,7 @@ function main() {
             break;
         case 1:  // Safari on iPad
             $("#_02").children("h2").on("click", function() {
-                $(this).fadeOut(1000);
+                $(this).css("opacity", "0");
             });
             break;
         case -1:  // Unsupported browser/device
@@ -105,6 +107,24 @@ function main() {
         $("#_03").children(".media").html("<video controls>\n<source src=\"lib/video/Cristofori Piano.mp4\" type=\"video/mp4\">\n:(<br/>\nTrình duyệt web không hỗ trợ video.\n</video>");
     }
 
+    // Number of piano bubbles on the second verticle slide of slide 3
+    var numberOfPianoBubbles = null;
+
+    Reveal.configure({
+        keyboard: {
+            82: function() {  // R key -> Reset things that were manually changed by the user
+                $("#piano-bubbles").children(".bubble").css("opacity", "0");
+                setTimeout(function() {
+                    placePianoBubbles();
+                    numberOfPianoBubbles = 7
+                    setTimeout(function() {
+                        $("#piano-bubbles").children(".bubble").css("opacity", "0.5");
+                    }, 100);
+                }, 900);
+            }
+        }
+    });
+
     // Just an animation for slide #2
     Reveal.addEventListener("credit-rollback", function() {
         $("#_02").children("h2").css("padding-right", "6em");
@@ -115,8 +135,6 @@ function main() {
             $("#_02").children("h2").css("padding-right", "initial");
         }, 300);
     });
-
-    var numberOfPianoBubbles = null;
 
     Reveal.addEventListener("place-bubble", function() {
         if (numberOfPianoBubbles == null || numberOfPianoBubbles == 7) {
