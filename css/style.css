@@ -26,11 +26,11 @@ p {
     font-size: 3em;
 }
 
-.year {
+h3.year {
     text-align: left;
 }
 
-.subject {
+h2.subject {
     text-align: left;
 }
 
@@ -60,12 +60,12 @@ p.description.serif {
     width: 100%;
 }
 
-.slides > #_02 {
+#_02 {
     text-align: right;
     text-align: -webkit-right;
 }
 
-.slides #_02 h2 {
+#_02 h2 {
     padding-right: 3.5em;
     transition: 1s;
     -webkit-transition: 1s;
@@ -118,4 +118,24 @@ p.description.serif {
 
 #_03 #piano-bubbles .bubble:nth-child(7) {
     background-color: magenta;
+}
+
+@media only screen and (min-width: 1800px) {
+    #_02 h2 {
+        font-size: 2em;
+    }
+
+    h2.subject, h3.year {
+        font-size: 2em;
+    }
+
+    p.description {
+        font-size: 1.3em;
+    }
+
+    #_03 #piano-bubbles .bubble {
+        margin: 15px;
+        height: 2.2em;
+        width: 2.2em;
+    }
 }
