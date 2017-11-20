@@ -79,9 +79,9 @@ function main() {
             });
             break;
         case -1:  // Unsupported browser/device
-            alertMsg = "Your browser and/or device is not supported.\n"
-                + "If you are on a desktop device, view the presentation in Google Chrome or a Chrome-based web browser like Chromiun.\n"
-                + "If you are on an iPad, view this in Safari.\nYou can proceed, however, you might see unexpected things";
+            alertMsg = "Thiết bị hoặc trình duyệt web của bạn không được bài thuyết trình hỗ trợ.\n"
+                + "Nếu bạn đang dùng máy tính cá nhân, nên xem bài thuyết trình bằng trình duyệt web Google Chrome hoặc các biến thể của nó (Chromium, Cốc Cốc,...).\n"
+                + "Nếu bạn đang dùng iPad, nên xem bài thuyết trình bằng trình duyệt web Safari.\nBạn có thể tiếp tục, nhưng bạn sẽ gặp phải lỗi hoặc những thứ không mong muốn xảy ra.";
             alert(alertMsg);
             delete alertMsg;
             break;
