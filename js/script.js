@@ -155,10 +155,8 @@ function main() {
 $(document).ready(main);
 $(window).on("load", function() {
     Reveal.configure({
-        keyboard: {
-            // Enable navigation
-            keyboard: true,
-            controls: true,
-        }
+        // Enable navigation
+        keyboard: true,
+        controls: true,
     });
 });
