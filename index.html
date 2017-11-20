@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi" manifest="manifest.appcache">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -72,8 +72,6 @@
         <script src="lib/js/is.min.js"></script>
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.js"></script>
-        <script src="js/script.js"></script>
-
         <script>
             Reveal.initialize({
                 width: '90%',
@@ -88,6 +86,16 @@
                     { src: 'plugin/notes/notes.js', async: true },  // Import Speaker Notes plugin
                 ]
             });
+
+            // Initial configure, will be changed
+            Reveal.configure({
+                keyboard: {
+                    // Disable navigation until everything finishes loading
+                    keyboard: false,
+                    controls: false,
+                }
+            });
         </script>
+        <script src="js/script.js"></script>
     </body>
 </html>
