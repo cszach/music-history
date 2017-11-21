@@ -51,7 +51,7 @@ h2.subject {
     overflow-y: scroll;
 }
 
-.contents div.description.wrapper p.description, .contents div.media iframe, .contents div.media video {
+.contents div.description.wrapper p.description, .contents div.media iframe, .contents div.media video, .contents div.media img {
     height: 10em !important;
 }
 
@@ -135,6 +135,13 @@ p.description.modern {
     background-color: magenta;
 }
 
+@media only screen and (orientation: portrait) {
+    .media > img {
+        height: 100%;
+        width: initial !important;
+    }
+}
+
 @media only screen and (min-width: 700px) and (max-width: 900px) and (min-height: 900px) and (orientation: portrait) {
     #headline {
         font-size: 1.8em;
@@ -156,7 +163,7 @@ p.description.modern {
         display: initial;
     }
 
-    .contents div.media iframe, .contents div.media video {
+    .contents div.media iframe, .contents div.media video, .contents div.media img {
         width: 65%;
         height: 5.5em !important;
     }
