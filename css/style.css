@@ -135,6 +135,10 @@ p.description.modern {
     background-color: magenta;
 }
 
+#_10 .contents .description.wrapper {
+    overflow-y: initial;  /*No need for a scrollbar*/
+}
+
 @media only screen and (orientation: portrait) {
     .media > img {
         height: 100%;
