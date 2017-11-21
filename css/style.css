@@ -38,16 +38,32 @@ h2.subject {
     font-family: Oswald, Roboto Condensed, Helvetica, serif;
 }
 
-.contents > p.description, .contents > div.media {
+.contents {
+    width: 100%;
+}
+
+.contents > div.description.wrapper, .contents > div.media {
     width: 50%;
     display: inline-block;
+}
+
+.contents > div.description.wrapper {
+    overflow-y: scroll;
+}
+
+.contents div.description.wrapper p.description, .contents div.media iframe, .contents div.media video {
+    height: 10em !important;
+}
+
+p.description {
+    text-align: left;
 }
 
 p.description.serif {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, EB Garamond, FreeSerif, serif;
 }
 
-.contenst > p.description.modern {
+p.description.modern {
     font-family: Roboto, Vogue, Arial;
 }
 
@@ -60,6 +76,10 @@ p.description.serif {
     width: 100%;
 }
 
+.contents > div.media {
+    vertical-align: top;
+}
+
 #_02 {
     text-align: right;
     text-align: -webkit-right;
@@ -69,10 +89,6 @@ p.description.serif {
     padding-right: 3.5em;
     transition: 1s;
     -webkit-transition: 1s;
-}
-
-#_03 section .description {
-    text-align: left;
 }
 
 #_03 #piano-bubbles .bubble {
@@ -136,6 +152,15 @@ p.description.serif {
         font-size: 1.2em;
     }
 
+    .contents > div.description.wrapper, .contents > div.media {
+        display: initial;
+    }
+
+    .contents div.media iframe, .contents div.media video {
+        width: 65%;
+        height: 5.5em !important;
+    }
+
     p.description {
         font-size: 0.75em;
     }
@@ -161,6 +186,16 @@ p.description.serif {
     p.description {
         font-size: 0.8em;
     }
+
+    .contents > div.description.wrapper {
+        height: 9em;
+        width: 55%;
+    }
+
+    .contents > div.media {
+        height: 9em;
+        width: 45%;
+    }
 }
 
 @media only screen and (min-width: 1800px) {
@@ -169,11 +204,20 @@ p.description.serif {
     }
 
     h2.subject, h3.year {
-        font-size: 2em;
+        font-size: 1.6em;
     }
 
     p.description {
         font-size: 1.3em;
+    }
+
+    .contents > div.description.wrapper {
+        height: 10em;
+        width: 60%;
+    }
+
+    .contents > div.media {
+        width: 40%;
     }
 
     #_03 #piano-bubbles .bubble {
