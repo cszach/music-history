@@ -72,7 +72,6 @@ p.description.serif {
 }
 
 #_03 section .description {
-    /*font-size: 1.05em;*/
     text-align: left;
 }
 
@@ -118,6 +117,32 @@ p.description.serif {
 
 #_03 #piano-bubbles .bubble:nth-child(7) {
     background-color: magenta;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 900px) and (min-height: 900px) and (orientation: portrait) {
+    #headline {
+        font-size: 1.8em;
+    }
+
+    #_02 h2 {
+        font-size: 0.9em;
+    }
+
+    h3.year {
+        font-size: 1em;
+    }
+
+    h2.subject {
+        font-size: 1.2em;
+    }
+
+    p.description {
+        font-size: 0.75em;
+    }
+
+    .media > iframe {
+        height: 10em;
+    }
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1200px) {

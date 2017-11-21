@@ -41,10 +41,19 @@ function placePianoBubbles() {
         }
     });
 
+    flag1 = 16;
+    flag2 = 5;
+
+    // For responsive purpose
+    if (window.screen.width >= 700 && window.screen.width <= 900 && window.screen.height >= 900 && window.innerHeight > window.innerWidth) {
+        flag1 = 11;
+        flag2 = 2;
+    }
+
     changeFactor = null;  // The CSS rule to be changed (margin-left or margin-right), depended on the margin-left
     $("#piano-bubbles").children(".bubble").each(function() {
         changeFactor = ($(this).css("margin-left") == "auto") ? "margin-right" : "margin-left";
-        $(this).css(changeFactor, Math.floor(Math.random() * 16 + 5) + "em");
+        $(this).css(changeFactor, Math.floor(Math.random() * flag1 + flag2) + "em");
     });
 
     // Stuffs to do at the end
@@ -57,7 +66,7 @@ function placePianoBubbles() {
         // Reset cursor type
         $("#piano-bubbles").children(".bubble").css("opacity", "0.5").css("cursor", "pointer");
     }, 100);
-
+    
 }
 
 /**
