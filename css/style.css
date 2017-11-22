@@ -141,6 +141,14 @@ p.description.modern {
     overflow-y: initial;  /*No need for a scrollbar*/
 }
 
+#ending {
+    text-align: left;
+}
+
+#ending > h2 {
+    color: white;
+}
+
 @media only screen and (orientation: portrait) {
     .media > img {
         height: 100%;
