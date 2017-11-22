@@ -135,7 +135,8 @@ p.description.modern {
     background-color: magenta;
 }
 
-#_10 .contents .description.wrapper, #_15 .contents .description.wrapper, #_16 .contents .description.wrapper {
+#_10 .contents .description.wrapper, #_15 .contents .description.wrapper, 
+#_16 .contents .description.wrapper, #_17 .contents .description.wrapper {
     overflow-y: initial;  /*No need for a scrollbar*/
 }
 
