@@ -33,10 +33,6 @@ p {
     height: 8px;
 }
 
-.reveal .progress span {
-    /*background: orange;*/
-}
-
 #headline {
     font-size: 3em;
 }
@@ -63,7 +59,7 @@ h2.subject {
 }
 
 .contents > div.description.wrapper {
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .contents div.description.wrapper p.description, .contents div.media iframe, .contents div.media video, .contents div.media img {
@@ -109,10 +105,6 @@ p.description.modern.now {
     padding-right: 3.5em;
     transition: 1s;
     -webkit-transition: 1s;
-}
-
-div.description.wrapper.noscroll {
-    overflow-y: initial;
 }
 
 #ending > h2 {

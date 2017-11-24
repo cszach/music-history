@@ -19,9 +19,6 @@ function main() {
             $(this).css("opacity", "0");
         });
     }
-    else {
-        location.reload();
-    }
 
 
     /*Shared JavaScript actions*/
