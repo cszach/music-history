@@ -54,16 +54,13 @@ h2.subject {
 }
 
 .contents > div.description.wrapper, .contents > div.media {
+    height: 10.5em;
     width: 50%;
     display: inline-block;
 }
 
 .contents > div.description.wrapper {
     overflow-y: auto;
-}
-
-.contents div.description.wrapper p.description, .contents div.media iframe, .contents div.media video, .contents div.media img {
-    height: 10.5em !important;
 }
 
 p.description {
@@ -137,11 +134,6 @@ p.description.modern.now {
 
     .contents > div.description.wrapper, .contents > div.media {
         display: initial;
-    }
-
-    .contents div.media iframe, .contents div.media video, .contents div.media img {
-        width: 65%;
-        height: 5.5em !important;
     }
 
     p.description {
