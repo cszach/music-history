@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    font-family: "Roboto-Condensed";
+    font-family: "Roboto Condensed";
     src: url("../lib/font/Roboto Condensed/RobotoCondensed-Regular.ttf") format("truetype");
 }
 
@@ -20,6 +20,21 @@
 
 p {
     margin: 0px !important;
+}
+
+.control-arrows {
+    /*Hide navigation arrows*/
+    /*Will be set to "initial" by JS*/
+    display: none !important;
+}
+
+/*Progress bar*/
+.reveal .progress {
+    height: 8px;
+}
+
+.reveal .progress span {
+    /*background: orange;*/
 }
 
 #headline {
@@ -52,10 +67,11 @@ h2.subject {
 }
 
 .contents div.description.wrapper p.description, .contents div.media iframe, .contents div.media video, .contents div.media img {
-    height: 10em !important;
+    height: 10.5em !important;
 }
 
 p.description {
+    font-size: 0.95em;
     text-align: left;
 }
 
@@ -64,7 +80,11 @@ p.description.serif {
 }
 
 p.description.modern {
-    font-family: Roboto, Vogue, Arial;
+    font-family: Roboto, Vogue, Arial, sans-serif;
+}
+
+p.description.modern.now {
+    font-family: Roboto Condensed, Roboto, Vogue, Arial, sans-serif;
 }
 
 .media > iframe {
@@ -80,69 +100,19 @@ p.description.modern {
     vertical-align: top;
 }
 
-#_02 {
+#credits {
     text-align: right;
     text-align: -webkit-right;
 }
 
-#_02 h2 {
+#credits h2 {
     padding-right: 3.5em;
     transition: 1s;
     -webkit-transition: 1s;
 }
 
-#_03 #piano-bubbles .bubble {
-    margin: 5px;
-    height: 2em;
-    width: 2em;
-    display: block;
-    border-radius: 100%;
-    opacity: 0.5;
-    transition: 0.8s;
-    -webkit-transition: 1s;
-    cursor: pointer;
-}
-
-#_03 #piano-bubbles .bubble:hover {
-    opacity: 0.7;
-}
-
-#_03 #piano-bubbles .bubble:first-child {
-    background-color: orange;
-}
-
-#_03 #piano-bubbles .bubble:nth-child(2) {
-    background-color: blue;
-}
-
-#_03 #piano-bubbles .bubble:nth-child(3) {
-    background-color: yellowgreen;
-}
-
-#_03 #piano-bubbles .bubble:nth-child(4) {
-    background-color: red;
-}
-
-#_03 #piano-bubbles .bubble:nth-child(5) {
-    background-color: white;
-}
-
-#_03 #piano-bubbles .bubble:nth-child(6) {
-    background-color: yellow;
-}
-
-#_03 #piano-bubbles .bubble:nth-child(7) {
-    background-color: magenta;
-}
-
-#_10 .contents .description.wrapper, #_15 .contents .description.wrapper, 
-#_16 .contents .description.wrapper, #_17 .contents .description.wrapper,
-#_18 .contents .description.wrapper {
-    overflow-y: initial;  /*No need for a scrollbar*/
-}
-
-#ending {
-    text-align: left;
+div.description.wrapper.noscroll {
+    overflow-y: initial;
 }
 
 #ending > h2 {
@@ -161,7 +131,7 @@ p.description.modern {
         font-size: 1.8em;
     }
 
-    #_02 h2 {
+    #credits h2 {
         font-size: 0.9em;
     }
 
@@ -196,7 +166,7 @@ p.description.modern {
         font-size: 2.5em;
     }
 
-    #_02 h2 {
+    #credits h2 {
         font-size: 1.2em;
     }
 
@@ -220,7 +190,7 @@ p.description.modern {
 }
 
 @media only screen and (min-width: 1800px) {
-    #_02 h2 {
+    #credits h2 {
         font-size: 2em;
     }
 
