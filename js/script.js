@@ -20,6 +20,9 @@ function main() {
         });
     }
 
+    if (innerHeight > innerWidth) {  // Orientation is portrait
+        Reveal.configure({ height: '90%' });
+    }
 
     /*Shared JavaScript actions*/
 
@@ -37,6 +40,9 @@ function main() {
 }
 
 $(document).ready(main);
+
+// Allow navigation after the page finishes loading
+// No one wants to view a half-loaded presentation
 $(window).on("load", function() {
     Reveal.configure({
         keyboard: true,
