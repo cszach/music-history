@@ -132,6 +132,7 @@ p.description.modern.now {
     }
 
     h3.year {
+        margin-top: 0.5em;
         font-size: 1em;
     }
 
@@ -140,7 +141,8 @@ p.description.modern.now {
     }
 
     .contents > div.description.wrapper {
-        height: 7em !important;
+        width: 90%;
+        height: 6em !important;
     }
 
     .contents > div.media {
@@ -152,7 +154,12 @@ p.description.modern.now {
     }
 
     .media > iframe {
-        height: 8em;
+        width: 80%;
+        height: 7em;
+    }
+
+    .media > img {
+        height: 7em;
     }
 
     .fix-title .contents .media img {

@@ -36,13 +36,16 @@ function main() {
 }
 
 $(document).ready(main);
-
-// Allow navigation after the page finishes loading
-// No one wants to view a half-loaded presentation
 $(window).on("load", function() {
+    if (is.mobile() || is.tablet() || is.not.desktop()) {  // Mobile devices
+        Reveal.configure({height: '90%'});  // Set height to 90% mainly to serve portrait mode
+    }
+
+    // Enable navigation
     Reveal.configure({
         keyboard: true,
     });
+
     $(".control-arrows").each(function() {
         this.style.setProperty("display", "initial", "important");
     });
