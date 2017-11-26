@@ -32,11 +32,6 @@ function main() {
             $("#credits").children("h2").css("padding-right", "initial");
         }, 300);
     });
-
-    particlesJS.load("particles-js", "../particles.json", function() {
-        console.log("callback - particles.js config loaded");
-    });
-
 }
 
 $(document).ready(main);
