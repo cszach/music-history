@@ -198,7 +198,7 @@ p.description.modern.now {
     }
 }
 
-/*Tablets & Laptops on landscape*/
+/*Tablets on landscape*/
 @media only screen and (min-width: 1000px) and (max-width: 1200px) and (orientation: landscape) {
     #headline {
         font-size: 2.5em;
@@ -213,7 +213,7 @@ p.description.modern.now {
     }
 
     h2.subject {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     p.description {
