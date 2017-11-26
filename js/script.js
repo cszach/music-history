@@ -43,6 +43,7 @@ $(window).on("load", function() {
     // Enable navigation
     Reveal.configure({
         keyboard: true,
+        touch: true,
     });
 
     $(".control-arrows").each(function() {

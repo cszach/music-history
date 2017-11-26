@@ -123,6 +123,17 @@ p.description.modern.now {
 
 /*Intentionally for iPad on portrait*/
 @media only screen and (min-width: 700px) and (max-width: 1000px) and (min-height: 900px) and (orientation: portrait) {
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+
     #headline {
         font-size: 1.8em;
     }
@@ -168,6 +179,17 @@ p.description.modern.now {
 
 /*Intentionaly for iPad Pro on portrait*/
 @media only screen and (min-width: 1001px) and (max-width: 1024px) and (min-height: 1000px) and (orientation: portrait) {
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+
     #headline {
         font-size: 2.6em;
     }
@@ -200,6 +222,17 @@ p.description.modern.now {
 
 /*Tablets on landscape*/
 @media only screen and (min-width: 1000px) and (max-width: 1200px) and (orientation: landscape) {
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+
     #headline {
         font-size: 2.5em;
     }
