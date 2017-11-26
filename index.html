@@ -585,10 +585,13 @@
         <script>
             Reveal.initialize({
                 width: '90%',
-                controls: false,
-                keyboard: false,
+                height: '90%',
                 progress: true,
                 center: true,
+                controls: false,  // Use custom controls, not this default controls
+                keyboard: false,  // Disable navigation; Only enables it after the presentation finishes loading
+
+                /*Import dependencies*/
                 dependencies: [
                     { src: 'plugin/markdown/marked.js' },
                     { src: 'plugin/markdown/markdown.js' },  // Markdown stuffs
@@ -598,6 +601,8 @@
                     { src: 'plugin/notes/notes.js', async: true },  // Import Speaker Notes plugin
                     { src: 'plugin/custom-controls/customcontrols.js' },
                 ],
+
+                /*Custom controls*/
                 customcontrols: {
                     controls: [ 
                         {

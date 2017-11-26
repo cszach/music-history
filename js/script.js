@@ -20,13 +20,9 @@ function main() {
         });
     }
 
-    if (innerHeight > innerWidth) {  // Orientation is portrait
-        Reveal.configure({ height: '90%' });
-    }
-
     /*Shared JavaScript actions*/
 
-    // Just an animation for slide #2
+    // Just an animation for slide #credits
     Reveal.addEventListener("credit-rollback", function() {
         $("#credits").children("h2").css("padding-right", "6em");
     });
