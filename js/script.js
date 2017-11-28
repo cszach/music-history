@@ -14,7 +14,7 @@ function main() {
             }
         );
     }
-    else if (is.mobile()) {
+    else {
         $("#credits").children("h2").on("click", function() {
             $(this).css("opacity", "0");
         });
