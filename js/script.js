@@ -40,13 +40,17 @@ $(window).on("load", function() {
         Reveal.configure({height: '90%'});  // Set height to 90% mainly to serve portrait mode
     }
 
-    // Enable navigation
-    Reveal.configure({
-        keyboard: true,
-        touch: true,
-    });
+    if (innerWidth > 699) {  // Enable navigation
+        Reveal.configure({
+            keyboard: true,
+            touch: true,
+        });
 
-    $(".control-arrows").each(function() {
-        this.style.setProperty("display", "initial", "important");
-    });
+        $(".control-arrows").each(function() {
+            this.style.setProperty("display", "initial", "important");
+        });
+    }
+    else {  // Totally unsupported because the width is too small
+        alert("Hãy xem bài thuyết trình này trên thiết bị lớn hơn (máy tính cá nhân / máy tính bảng).");
+    }
 });
