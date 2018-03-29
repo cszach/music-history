@@ -42,6 +42,7 @@ $(window).on("load", function() {
 
     if (innerWidth > 699) {  // Enable navigation
         Reveal.configure({
+            controls: true,
             keyboard: true,
             touch: true,
         });
