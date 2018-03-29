@@ -101,14 +101,16 @@ p.description.modern.now, #daw-leaderboard, #ref-daw-leaderboard {
 }
 
 #credits {
-    text-align: right;
     text-align: -webkit-right;
+    text-align: right;
 }
 
 #credits h2 {
     padding-right: 3.5em;
-    transition: 1s;
     -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
 }
 
 #ending > h2 {
