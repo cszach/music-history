@@ -45,10 +45,6 @@ $(window).on("load", function() {
             keyboard: true,
             touch: true,
         });
-
-        $(".control-arrows").each(function() {
-            this.style.setProperty("display", "initial", "important");
-        });
     }
     else {  // Totally unsupported because the width is too small
         alert("Hãy xem bài thuyết trình này trên thiết bị lớn hơn (máy tính cá nhân / máy tính bảng).");

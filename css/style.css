@@ -22,12 +22,6 @@ p {
     margin: 0px !important;
 }
 
-.control-arrows {
-    /*Hide navigation arrows*/
-    /*Will be set to "initial" by JS*/
-    display: none !important;
-}
-
 /*Progress bar*/
 .reveal .progress {
     height: 8px;
