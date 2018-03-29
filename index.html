@@ -8,7 +8,7 @@
 
         <!--Import CSS and CSS theme-->
         <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/black.css">
+        <link rel="stylesheet" href="css/black.css">
         <link rel="stylesheet" href="css/style.css">
 
         <!-- Theme used for syntax highlighting of code -->
@@ -19,15 +19,6 @@
 
         <!--Site's icon-->
         <link rel="icon" href="favicon.png">
-
-        <!-- Printing and PDF exports -->
-        <script>
-            var link = document.createElement( 'link' );
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
-        </script>
 
         <!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js" async></script>
@@ -252,7 +243,7 @@
                     <div class="contents">
                         <div class="description wrapper">
                             <p class="description modern">
-                                Phần mềm chỉnh sửa âm (Digital Audio Workstation - DAW) giúp người dùng ghi âm, 
+                                Phần mềm chỉnh sửa âm (Digital Audio Workstation - DAW) giúp người dùng ghi âm,
                                 chỉnh sửa âm, sản xuất âm nhạc cũng như tạo các hiệu ứng âm thanh. Năm 1978,
                                 Soundstream - một công ty của Hoa Kỳ - đã tạo nên phần mềm chỉnh sửa âm đầu tiên,
                                 và họ gọi nó là "The Digital Editing System" (tạm dịch: "Hệ thống chỉnh sửa kỹ thuật số").
@@ -272,7 +263,7 @@
                                 Đĩa cứng là đĩa chế tạo bằng chất dẻo, dùng để lưu trữ âm thanh
                                 là phổ biến nhất, tuy nhiên chúng có khả năng ghi nhớ dữ liệu
                                 máy tính nói chung (và được gọi là CD-ROM). CD được phát minh bởi
-                                hai hãng Sony và Philips. Có rất nhiều loại đĩa cứng, 
+                                hai hãng Sony và Philips. Có rất nhiều loại đĩa cứng,
                                 ví dụ như CD-R, CD-RW,...
                             </p>
                         </div><!--
@@ -536,7 +527,7 @@
                     <div class="contents">
                         <div class="description wrapper">
                             <p class="description modern now">
-                                Hatsune Miku là phần mềm tổng hợp giọng hát đã xuất hiện trong hơn 100 nghìn 
+                                Hatsune Miku là phần mềm tổng hợp giọng hát đã xuất hiện trong hơn 100 nghìn
                                 bài hát trên toàn thế giới. Video bên cạnh cho xem một sản phẩm của phần mềm Hatsune Miku.
                             </p>
                         </div><!--
@@ -611,26 +602,22 @@
 
                 /*Import dependencies*/
                 dependencies: [
-                    { src: 'plugin/markdown/marked.js' },
-                    { src: 'plugin/markdown/markdown.js' },  // Markdown stuffs
                     { src: 'plugin/zoom-js/zoom.js', async: true },  // Import zoom.js
-                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },  // Import code highlighting engine
-                    { src: 'plugin/math/math.js', async: true },  // Import math.js, an alternative plugin of MathJax
                     { src: 'plugin/notes/notes.js', async: true },  // Import Speaker Notes plugin
                     { src: 'plugin/custom-controls/customcontrols.js' },
                 ],
 
                 /*Custom controls*/
                 customcontrols: {
-                    controls: [ 
+                    controls: [
                         {
-                            icon: "<i class=\"control-arrows fa fa-chevron-left\" aria-hidden=\"true\"></i>", 
-                            css: "position: fixed; right: 80px; bottom: 30px; z-index: 30; font-size: 35px;", 
-                            action: "Reveal.prev(); return false;" 
-                        }, 
+                            icon: "<i class=\"control-arrows fa fa-chevron-left\" aria-hidden=\"true\"></i>",
+                            css: "position: fixed; right: 80px; bottom: 30px; z-index: 30; font-size: 35px;",
+                            action: "Reveal.prev(); return false;"
+                        },
                         {
-                            icon: "<i class=\"control-arrows fa fa-chevron-right\" aria-hidden=\"true\"></i>", 
-                            css: 'position: fixed; right: 30px; bottom: 30px; z-index: 30; font-size: 35px;', 
+                            icon: "<i class=\"control-arrows fa fa-chevron-right\" aria-hidden=\"true\"></i>",
+                            css: 'position: fixed; right: 30px; bottom: 30px; z-index: 30; font-size: 35px;',
                             action: 'Reveal.next(); return false;'
                         }
                     ]
