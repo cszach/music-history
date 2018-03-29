@@ -18,6 +18,11 @@
     src: url("../lib/font/EB Garamond/EBGaramond-Medium.ttf") format("truetype");
 }
 
+.reveal .controls {
+    right: 1cm;
+    bottom: 1cm;
+}
+
 p {
     margin: 0px !important;
 }
